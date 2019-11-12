@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var array = [10,7,2,4,5,3,1];
+    
+    function sort(arr, i) {
+        if( i < arr.length) {
+            for(var n = 0; n< arr.length - 1; n++) {
+                if(arr[n] > arr[n + 1]) {
+                    var min = arr[n];
+                    console.log('start:' + arr[n]);
+                    arr[n] = arr[n + 1];
+                    console.log('mid:' + arr[n]);
+                    arr[n + 1] = min;
+                    console.log('end:' + arr[n]);
+                }
+            }
+            sort(arr, ++i);
+        }
+    }
+    sort(array,0);
+    console.log(array);
+    </script>
+</body>
+</html>
