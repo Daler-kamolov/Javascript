@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+       <script>
+		var sel = (function() {
+    		var sum = 0;
+
+    		function sel(n) {
+       		 	sum += +n || 0;
+       		 	return sel;
+    		}
+    		sel.valueOf = function() {
+        		return sum;
+    		}
+    		sel.toString = valueOf;
+    		return sel;
+		}());
+
+		console.log(sel(2)(1)()()(23)()()(140));
+
+	</script>
+</body>
+</html>
