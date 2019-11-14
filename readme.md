@@ -1,4 +1,4 @@
-# My homeworks
+﻿# My homeworks
 ## lesson 3
 ### Navbar
 ## lesson 4
@@ -12,3 +12,5 @@
 ## lesson 8
 ### 1.NOD
 ### 2.Bublesort
+## lesson 9
+### function sum()....
