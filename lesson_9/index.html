@@ -11,8 +11,8 @@
 		var sel = (function() {
     		var sum = 0;
 
-    		function sel(n) {
-       		 	sum += +n || 0;
+    		function sel(n=0) {
+       		 	sum += +n;
        		 	return sel;
     		}
     		sel.valueOf = function() {
