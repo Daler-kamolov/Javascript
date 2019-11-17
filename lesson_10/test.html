@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function info() {   
+        //////////// object information
+        var obj = {
+           name: 'Max',
+           special: 'Engineer',
+           lections: [ 
+           {
+                name: 'Html',
+                grade: 5
+            },
+            
+            {
+                name: 'CSS',
+                grade: 4
+            },
+            {
+                name: 'JS',
+                grade: 3
+            }   
+            ]
+        }
+       ////////////////function Get && Set
+       this.getName = function() {
+          return obj.name;
+           }
+       this.setName = function(name) {
+           return obj.name = name;
+       }
+       this.getSpec = function() {
+          return obj.special;
+           }
+       this.setSpec = function (special) {
+           return obj.special = special;
+       }
+       this.getLection = function () {
+           return obj.lections;
+       }
+       this.averageMark = function () {
+            var a = 0;
+            var b = 0;
+            for(var i = 0; i< obj.lections.length;i++) {
+                a += obj.lections[i].grade;
+                b += i;
+            }
+            var c = a/b;
+            return c;
+          }
+         
+     
+       
+      }
+      var studentInfo = new info();
+      console.log(studentInfo.getName());
+      console.log(studentInfo.setName('Marko Polo'));
+      console.log(studentInfo.getSpec());
+      console.log(studentInfo.setSpec('Frontend'));
+      console.log(studentInfo.getLection());
+      console.log(studentInfo.averageMark());
+    </script>
+</body>
+</html>
