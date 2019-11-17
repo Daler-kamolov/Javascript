@@ -14,3 +14,5 @@
 ### 2.Bublesort
 ## lesson 9
 ### function sum()....
+## lesson 10
+### Test (function with closure,scope,this)
