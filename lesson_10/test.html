@@ -26,6 +26,10 @@
             {
                 name: 'JS',
                 grade: 3
+            },
+            {
+              name: 'REACt',
+              grade: 2
             }   
             ]
         }
@@ -47,11 +51,10 @@
        }
        this.averageMark = function () {
             var a = 0;
-            var b = 0;
+            var b = obj.lections.length;
             for(var i = 0; i< obj.lections.length;i++) {
                 a += obj.lections[i].grade;
-                b += i;
-            }
+                }
             var c = a/b;
             return c;
           }
