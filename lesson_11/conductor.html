@@ -6,68 +6,68 @@
 </head>
 <body>
 	<script>
-		 function metrics() {
-            var currentmetric = 0,
-                tarrif = 0.33,
-                date = "",
-                ispayed = false,
-                metrics = [],
-                currentsum = 0,
-                conductor = "",
-                paymentdate = "",
-                debt = 0,
-                prepay = 0;
+		function metrics() {
+                var currentmetric = 0,
+                    tarrif = 0.33,
+                    date = "",
+                    ispayed = false,
+                    metrics = [],
+                    currentsum = 0,
+                    conductor = "",
+                    paymentdate = "",
+                    debt = 0,
+                    prepay = 0;
 
 
 
-                function set(newmetric,datemetric,payment) {
-                    currentmetric = newmetric;
-                    date = datemetric;
-                    ispayed = payment;
-                    currentsum = tarrif * newmetric;
-                } 
+                    function set(newmetric,datemetric,payment) {
+                        currentmetric = newmetric;
+                        date = datemetric;
+                        ispayed = payment;
+                        currentsum = tarrif * newmetric;
+                    } 
 
-                function pay(sum,conductorpay) {
-                    var difference = sum - currentsum;
-                    conductor = conductorpay;
-                    paymentdate = new Date();
-                    currentsum = currentsum - sum;
+                    function pay(sum,conductorpay) {
+                        var difference = sum - currentsum;
+                        conductor = conductorpay;
+                        paymentdate = new Date();
+                        currentsum = currentsum - sum;
                     
-                    if(difference >= 0) {
-                        prepay = difference;
-                        debt = false;
-                    }
-                    else {
-                        debt = difference;
-                        prepay = false;
-                    }
+                        if(difference >= 0) {
+                            prepay = difference;
+                            debt = 0;
+                        }
+                        else {
+                            debt = difference;
+                            prepay = 0;
+                        }
 
 
-                    metrics.push ({
-                        currentmetric,ispayed,date,currentsum,
-                        conductor,paymentdate
-                    })
-                }
-                function get() {
-                    var inf = {
-                        currentmetric,
-                        currentsum,
-                        date,
-                        ispayed,
-                        debt,
-                        prepay
+                        metrics.push ({
+                            currentmetric,ispayed,date,currentsum,
+                            conductor,paymentdate
+                        })
                     }
-                    if(ispayed) {
-                        inf.conductor = conductor;
-                        inf.paymentdate = paymentdate;
+                    function get() {
+                        var inf = {
+                            currentmetric,
+                            currentsum,
+                            date,
+                            ispayed,
+                            debt,
+                            prepay
+                        }
+                        if(ispayed) {
+                            inf.conductor = conductor;
+                            inf.paymentdate = paymentdate;
+                        }
+
+                        return inf;
                     }
 
-                    return inf;
-                }
-
-                return {
-                    set,pay,get
-                }
+                    return {
+                        set,pay,get
+                    }
         }
 
        var first = new metrics();
@@ -79,8 +79,8 @@
        second.set(200, "16.10.2003", true);
        second.pay(100,"Firuz");
        console.log(second.get());
-       third.set(700, "19.11.2020", false);
-       third.pay(100, "Ali");
+       third.set(1000, "20.12.2020", false);
+       third.pay(200,"Ali");
        console.log(third.get());
 	</script>
 </body>
