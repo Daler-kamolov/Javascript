@@ -16,3 +16,5 @@
 ### function sum()....
 ## lesson 10
 ### Test (function with closure,scope,this)
+## lesson 11
+### function (Barqi TJK)
