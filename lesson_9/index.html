@@ -14,13 +14,13 @@
     		function sel(n=0) {
        		 	sum += +n;
        		 	return sel;
-    		}
+    	
     		sel.valueOf = function() {
         		return sum;
     		}
     		sel.toString = valueOf;
     		return sel;
-		}());
+		}();
 
 		console.log(sel(2)(1)()()(23)()()(140));
 
