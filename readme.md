@@ -18,3 +18,7 @@
 ### Test (function with closure,scope,this)
 ## lesson 11
 ### function (Barqi TJK)
+## lesson 12
+### function (closure)
+## lesson 13
+### Player(play(),next(),prev(),getCurent(),addList())
