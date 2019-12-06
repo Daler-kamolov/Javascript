@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		var arr = ["Firuz", 19, "frontend"];
+
+
+Array.prototype.ownjoin = function (sperator) {
+    var str = '';
+
+    for (var i = 0; i < this.length; i++) {
+        str += this[i] + sperator;
+    }
+    return str;
+}
+
+console.log(arr.ownjoin(","));
+
+String.prototype.ownsplit = function (sperator) {
+    var arr = [];
+    var gab = [];
+    for (var i = 0; i < this.length; i++) {
+        if (this.charAt(i) == sperator) {
+            gab.push(this.charAt(i));
+        } else {
+            arr.push(this.charAt(i));
+        }
+    }
+
+    return arr;
+}
+
+var str = "Fayzali20year";
+
+console.log(str.ownsplit("9"));
+
+
+	</script>
+</body>
+</html>
