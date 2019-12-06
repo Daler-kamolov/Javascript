@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		var Player = {
+    list: [],
+    name: "player",
+    currentItem: 0,
+    played: false,
+    next: function() {
+        if(this.played) {
+            this.currentItem++;
+        } else {
+            this.currentItem = 0;
+        }
+    },
+    prev: function() {
+        if(this.played && this.currentItem > 0 ) {
+            this.currentItem--;
+        } else {
+            this.currentItem = this.list.length - 1;
+        }
+    },
+    getCurrent: function() {
+        return this.list[this.currentItem];
+    },
+    play: function() {
+        this.played = true;
+        console.log(this.getCurrent());
+    },
+};
+
+Object.prototype.addTolist = function (listItem) {
+    this.list = [];
+    this.list.push(listItem);
+}
+
+var VideoPlayer = {}; 
+
+
+VideoPlayer = Object.create(Player);
+
+var a = Object.create(Player);
+
+VideoPlayer.uploadToYoutube = function(name) {
+    for(var i = 0; i < this.list.length; i++) {
+        if(this.list[i].name === name) {
+            console.log("uploaded to youtube", this.list[i]);
+            return
+        }
+    }
+    console.log("cannot find file "+ name + " to upload to youtube");
+}
+
+
+VideoPlayer.playFromYoutube =function(item) {
+    console.log("Playing video from youtube: ", item);
+}
+
+
+VideoPlayer.addTolist({name: "Shashmaqom", year: 2010, duration: "32m", author: "Bobo"});
+// VideoPlayer.uploadToYoutube("Shashmaqom");
+a.addTolist({name: "Eminem", year: 1998, duration: "3m", author: "John"})
+
+console.log("VideoPlayer list:", VideoPlayer.list)
+console.log("a list: ", a.list)
+console.log("Player list:", Player.list);
+	</script>
+</body>
+</html>

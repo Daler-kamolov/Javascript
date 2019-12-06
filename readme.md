@@ -22,3 +22,5 @@
 ### function (closure)
 ## lesson 13
 ### Player(play(),next(),prev(),getCurent(),addList())
+## lesson 14
+### join(),split()
