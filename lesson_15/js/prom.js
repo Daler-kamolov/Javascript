@@ -8,6 +8,7 @@ function loadImg() {
         setTimeout(() =>{
             console.log('loading Images...');
             resolve();
+            /*reject();*/
         },500)
     });
     prom.then(function() {
