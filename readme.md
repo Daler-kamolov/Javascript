@@ -24,3 +24,5 @@
 ### Player(play(),next(),prev(),getCurent(),addList())
 ## lesson 14
 ### join(),split()
+## lesson 15 
+### promise (loading Images)

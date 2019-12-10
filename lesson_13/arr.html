@@ -22,13 +22,11 @@ console.log(arr.ownjoin(","));
 
 String.prototype.ownsplit = function (sperator) {
     var arr = [];
-    var gab = [];
+  
     for (var i = 0; i < this.length; i++) {
-        if (this.charAt(i) == sperator) {
-            gab.push(this.charAt(i));
-        } else {
+        
             arr.push(this.charAt(i));
-        }
+       
     }
 
     return arr;
@@ -36,7 +34,7 @@ String.prototype.ownsplit = function (sperator) {
 
 var str = "Fayzali20year";
 
-console.log(str.ownsplit("9"));
+console.log(str.ownsplit(""));
 
 
 	</script>
