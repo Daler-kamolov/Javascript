@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <script defer>
+       
+         function loadImg(url) {
+          return new Promise(function (resolve,reject) {
+            var img = document.createElement('img');
+          img.onload = function () {
+              resolve(url);
+          }
+          img.onerror = function () {
+              reject(url);
+          }
+          img.src = url;
+          document.body.append(img);
+          });  
+          
+        }
+            async function img() {
+                try {
+                    //a();
+                   var first = await loadImg('./img/js.jpg')
+                   console.log('first Image!');
+                   var second = await loadImg('./img/jsone.png')
+                   console.log('second Image!');
+                   //var Errr = await loadImg('asfaf');
+                   var third = await loadImg('./img/jstwo.png')
+                   console.log('third Image!');
+                   var Errr = await loadImg('asfaf');
+                }
+                catch(error) {
+                    console.log('Url: ' ,error);
+                }
+            }
+       img();
+    </script>
+</body>
+</html>

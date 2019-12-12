@@ -26,3 +26,5 @@
 ### join(),split()
 ## lesson 15 
 ### promise (loading Images)
+## lesson 16
+### promise (async/await(try/catch))
