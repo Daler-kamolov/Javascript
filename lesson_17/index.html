@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            var spin = document.createElement('div');
+                document.body.append(spin);
+                spin.classList.add('spin');
+            function loadimg (url) {
+                new Promise(function(res,rej) {
+                    var img = document.createElement('img');
+                    
+                    img.onload = function () {
+                        res(url);
+                    }
+                    img.onerror = function () {
+                        rej(url);
+                    }
+                    img.src = url;
+                    document.body.append(img);
+                });       
+            }
+            function showSpin(a) {
+                spin.style.display = 'block';
+            }
+            function hideSpin() {
+                spin.style.display = 'none';
+            }
+            async function images() {
+                try {
+                    showSpin()
+                    var first = await loadimg('./img/js.jpg')
+                    console.log("first");
+                    var second = await loadimg('./img/jsone.png')
+                    console.log("second");
+                    var third = await loadimg('./img/jstwo.png');
+                    console.log('third');
+                   
+                }
+                catch(error) {
+                    console.log(error);
+                }
+                finally{
+                    hideSpin()
+                }
+            }
+            images();
+        }
+    </script>
+</body>
+</html>

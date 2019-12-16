@@ -1,6 +1,4 @@
-div img{
-   margin-top:50px; 
-   margin-left:500px;
-   border:1px solid black;
-   display: none;
+img {
+   display: block;
+   margin-top: 50px;
 }
