@@ -29,28 +29,28 @@
             }
             function showSpin(a) {
                 spin.style.display = 'block';
+                console.log("start spin!")
             }
             function hideSpin() {
                 spin.style.display = 'none';
             }
             async function images() {
                 try {
-                    showSpin()
+                    showSpin();
                     var first = await loadimg('./img/js.jpg')
                     console.log("first");
                     var second = await loadimg('./img/jsone.png')
                     console.log("second");
                     var third = await loadimg('./img/jstwo.png');
                     console.log('third');
-                   
+                    hideSpin()
                 }
                 catch(error) {
                     console.log(error);
                 }
-                finally{
-                    hideSpin()
-                }
+               
             }
+                
             images();
         }
     </script>

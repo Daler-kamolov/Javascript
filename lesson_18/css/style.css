@@ -1,0 +1,115 @@
+.good {
+    animation: bd 3s infinite linear;
+}
+.vip {
+    width: 200px;
+    height: 200px;
+    background: gray;
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 30px;
+
+    transition: 2s;
+    transform: rotateY(-180deg);
+    border-radius: 10px;
+    border: 3px solid transparent;
+}
+.lev1 {
+    font-size: 35px;
+    text-align: center;
+    color: blue;
+    font-family: cursive;
+    opacity: 1;
+}
+.vip-btn {
+    color:white;
+    background-color: teal;
+    padding: 10px 40px;
+    border:1px solid teal;
+    border-radius: 5px;
+}
+.vip-btn:hover {
+    color:teal;
+    background-color: white ;
+    cursor: pointer;
+}
+.score {
+    font-family: cursive;
+    position: fixed;
+    right: 50px;
+    color:red;
+}
+.total {
+    font-size: 30px;
+    animation: spin 3s infinite linear;
+}
+@keyframes spin{
+    0%{
+        color: blueviolet;
+    }
+    10%{
+        color: green;
+    }
+    20% {
+        color: greenyellow
+    }
+    30% {
+        color: grey;
+    }
+    40% {
+        color: red;
+    }
+    50% {
+        color: pink;
+    }
+    60% {
+        color:indigo;
+    }
+    70% {
+        color: cyan; 
+    }
+    80% {
+        color: orange;
+    }
+    90% {
+        color: blue;
+    }
+    100% {
+        color: orangered;
+    }
+}
+@keyframes bd{
+    0%{
+        background-color: green;blueviolet;
+    }
+    10%{
+        background-color: blueviolet;
+    }
+    20% {
+        background-color: grey
+    }
+    30% {
+        background-color: greenyellow;
+    }
+    40% {
+        background-color: pink;
+    }
+    50% {
+        background-color: red;
+    }
+    60% {
+        background-color: cyan;
+    }
+    70% {
+        background-color: cyanindigo; 
+    }
+    80% {
+        background-color: blue;
+    }
+    90% {
+        background-color: orange;
+    }
+    100% {
+        background-color: black;
+    }
+}
